@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClimbHub Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ClimbHub · Phase 0 Prototype</p>
+        <h1>A Strava-style route board for bouldering gyms.</h1>
+      </div>
+      <button id="authHint" class="chip">Anonymous Mode</button>
+    </header>
+
+    <nav class="tabs" id="tabs"></nav>
+    <main id="app"></main>
+
+    <dialog id="addProblemDialog">
+      <form id="addProblemForm">
+        <h3>Add a Problem</h3>
+        <label>Wall* <select name="wall" id="wallSelect" required></select></label>
+        <label>Grade* <select name="grade" id="gradeSelect" required></select></label>
+        <label>Color* <input name="color" required placeholder="Yellow" /></label>
+        <label>Photo URL* <input name="photo" type="url" required /></label>
+        <label>Name <input name="name" placeholder="Optional problem name" /></label>
+        <label>Description <textarea name="description" placeholder="Optional beta notes"></textarea></label>
+        <menu>
+          <button type="button" id="cancelAdd">Cancel</button>
+          <button type="submit">Create Problem</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
